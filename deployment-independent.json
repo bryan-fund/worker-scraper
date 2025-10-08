@@ -1,0 +1,169 @@
+{
+  "timestamp": "2025-10-08T07:49:48.974Z",
+  "version": "2.0-independent",
+  "totalWorkers": 20,
+  "successful": 20,
+  "failed": 0,
+  "workers": [
+    {
+      "id": "slc-scraper-alpha",
+      "number": 1,
+      "url": "https://slc-scraper-alpha.w2ntsrpc5v.workers.dev",
+      "browserType": "chrome",
+      "delay": 3,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-beta",
+      "number": 2,
+      "url": "https://slc-scraper-beta.w2ntsrpc5v.workers.dev",
+      "browserType": "firefox",
+      "delay": 5,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-gamma",
+      "number": 3,
+      "url": "https://slc-scraper-gamma.w2ntsrpc5v.workers.dev",
+      "browserType": "safari",
+      "delay": 4,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-delta",
+      "number": 4,
+      "url": "https://slc-scraper-delta.w2ntsrpc5v.workers.dev",
+      "browserType": "edge",
+      "delay": 6,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-epsilon",
+      "number": 5,
+      "url": "https://slc-scraper-epsilon.w2ntsrpc5v.workers.dev",
+      "browserType": "opera",
+      "delay": 2,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-zeta",
+      "number": 6,
+      "url": "https://slc-scraper-zeta.w2ntsrpc5v.workers.dev",
+      "browserType": "chrome",
+      "delay": 7,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-eta",
+      "number": 7,
+      "url": "https://slc-scraper-eta.w2ntsrpc5v.workers.dev",
+      "browserType": "firefox",
+      "delay": 4,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-theta",
+      "number": 8,
+      "url": "https://slc-scraper-theta.w2ntsrpc5v.workers.dev",
+      "browserType": "safari",
+      "delay": 5,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-iota",
+      "number": 9,
+      "url": "https://slc-scraper-iota.w2ntsrpc5v.workers.dev",
+      "browserType": "edge",
+      "delay": 3,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-kappa",
+      "number": 10,
+      "url": "https://slc-scraper-kappa.w2ntsrpc5v.workers.dev",
+      "browserType": "opera",
+      "delay": 6,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-lambda",
+      "number": 11,
+      "url": "https://slc-scraper-lambda.w2ntsrpc5v.workers.dev",
+      "browserType": "chrome",
+      "delay": 4,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-mu",
+      "number": 12,
+      "url": "https://slc-scraper-mu.w2ntsrpc5v.workers.dev",
+      "browserType": "firefox",
+      "delay": 3,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-nu",
+      "number": 13,
+      "url": "https://slc-scraper-nu.w2ntsrpc5v.workers.dev",
+      "browserType": "safari",
+      "delay": 5,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-xi",
+      "number": 14,
+      "url": "https://slc-scraper-xi.w2ntsrpc5v.workers.dev",
+      "browserType": "edge",
+      "delay": 4,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-omicron",
+      "number": 15,
+      "url": "https://slc-scraper-omicron.w2ntsrpc5v.workers.dev",
+      "browserType": "opera",
+      "delay": 6,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-pi",
+      "number": 16,
+      "url": "https://slc-scraper-pi.w2ntsrpc5v.workers.dev",
+      "browserType": "chrome",
+      "delay": 2,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-rho",
+      "number": 17,
+      "url": "https://slc-scraper-rho.w2ntsrpc5v.workers.dev",
+      "browserType": "firefox",
+      "delay": 7,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-sigma",
+      "number": 18,
+      "url": "https://slc-scraper-sigma.w2ntsrpc5v.workers.dev",
+      "browserType": "safari",
+      "delay": 3,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-tau",
+      "number": 19,
+      "url": "https://slc-scraper-tau.w2ntsrpc5v.workers.dev",
+      "browserType": "edge",
+      "delay": 5,
+      "status": "deployed"
+    },
+    {
+      "id": "slc-scraper-upsilon",
+      "number": 20,
+      "url": "https://slc-scraper-upsilon.w2ntsrpc5v.workers.dev",
+      "browserType": "opera",
+      "delay": 4,
+      "status": "deployed"
+    }
+  ]
+}

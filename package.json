@@ -1,0 +1,46 @@
+{
+  "name": "salt-lake-county-scraper",
+  "version": "1.0.0",
+  "description": "Cloudflare Workers system for scraping Salt Lake County property owner data",
+  "main": "src/worker.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy-prod": "wrangler deploy --env production",
+    "deploy-dev": "wrangler deploy --env development",
+    "deploy-workers": "node scripts/deploy-workers.js",
+    "start-server": "node server/data-collector.js",
+    "populate-work": "node scripts/populate-work-queue.js",
+    "start-scraping": "node scripts/start-scraping.js",
+    "deploy-independent": "node scripts/deploy-independent.js",
+    "scrape:independent": "node scripts/start-independent.js",
+    "restart-worker": "node scripts/restart-worker.js",
+    "monitor:independent": "node scripts/monitor-independent.js",
+    "cleanup-workers": "node scripts/cleanup-old-workers.js",
+    "monitor": "node scripts/monitor-progress.js",
+    "tail": "wrangler tail",
+    "tail-prod": "wrangler tail --env production",
+    "dashboard": "npm run dev --prefix dashboard"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "scraping",
+    "salt-lake-county",
+    "property-data"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^4.38.0"
+  },
+  "dependencies": {
+    "@cloudflare/workers-types": "^4.0.0",
+    "cors": "^2.8.5",
+    "crypto-random-string": "^5.0.0",
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.2",
+    "sqlite3": "^5.1.0",
+    "user-agents": "^1.1.664"
+  }
+}

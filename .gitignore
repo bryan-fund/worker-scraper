@@ -1,0 +1,30 @@
+node_modules/
+.wrangler/
+.dev.vars
+*.log
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+
+# Backup files
+backup_*.db
+corrupted_backup_*.db
+temp_backup.db
+*.sql
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment files
+.env
+.env.local

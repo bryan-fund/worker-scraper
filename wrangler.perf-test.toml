@@ -1,0 +1,14 @@
+name = "slc-scraper-perf-test"
+main = "src/perf-test-worker.js"
+compatibility_date = "2024-09-25"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+WORKER_ID = "perf-test-worker"
+COLLECTOR_URL = "http://localhost:3000"
+COLLECTOR_TOKEN = "your-secure-token-here"
+
+# Performance test specific settings
+PERF_TEST_MODE = "true"
+MAX_CONCURRENT_REQUESTS = "16"
+SIMULATED_LATENCY_MS = "50"

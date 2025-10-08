@@ -1,0 +1,36 @@
+name = "salt-lake-scraper"
+main = "src/worker-independent.js"
+compatibility_date = "2024-09-23"
+
+# Environment Variables
+[vars]
+WORKER_ID = "master"
+RATE_LIMIT_MS = "200"
+BATCH_SIZE = "10"
+CONTINUOUS = "1"
+LOCAL_COLLECTOR_URL = "https://sync.super-symmetry.ai/collect"
+COLLECTOR_BASE = "https://sync.super-symmetry.ai"
+COLLECTOR_TOKEN = "your-secure-token-here"
+CF_ACCESS_CLIENT_ID = "CF-Access-Client-Id: d092e29f5dc5589182f88b1089e145bf.access"
+CF_ACCESS_CLIENT_SECRET = "CF-Access-Client-Secret: d4c67425d040f9edc90185c47e3169310981cd15d4401637d87adb68bba5a741"
+COLLECTOR_ALLOW_CF_ACCESS = "1"
+
+# Production Environment
+[env.production]
+name = "salt-lake-scraper-prod"
+[env.production.vars]
+WORKER_ID = "production"
+RATE_LIMIT_MS = "500"
+LOCAL_COLLECTOR_URL = "https://sync.super-symmetry.ai/collect"
+COLLECTOR_BASE = "https://sync.super-symmetry.ai"
+COLLECTOR_TOKEN = "your-secure-token-here"
+CF_ACCESS_CLIENT_ID = "CF-Access-Client-Id: d092e29f5dc5589182f88b1089e145bf.access"
+CF_ACCESS_CLIENT_SECRET = "CF-Access-Client-Secret: d4c67425d040f9edc90185c47e3169310981cd15d4401637d87adb68bba5a741"
+COLLECTOR_ALLOW_CF_ACCESS = "1"
+
+# Development Environment
+[env.development]
+name = "salt-lake-scraper-dev"
+[env.development.vars]
+WORKER_ID = "development"
+RATE_LIMIT_MS = "500"
