@@ -119,7 +119,8 @@ class DataCollector {
     }
 
     refreshGlobalParcelPool() {
-        // Build or top-off pool with unprocessed parcel IDs (not yet in owner_data, not allocated, not already in pool)
+        // Build or top-off pool with unprocessed parcel IDs
+        // Unprocessed means: not in owner_data OR in owner_data with blank owner_name (failed scrape)
         const needed = this.GLOBAL_POOL_TARGET - this.globalParcelPool.length;
         if (needed <= 0) return;
         const limit = Math.min(needed * 5, 5000); // over-fetch more aggressively to filter
@@ -127,9 +128,14 @@ class DataCollector {
         console.log(`🔄 Refreshing global pool (need ${needed}, fetching ${limit})...`);
         
         // Use DISK database for accurate picture of processed parcels
-        const sql = `SELECT PARCEL_ID as parcel_id FROM salt_lake_county_lir_parcels 
-            WHERE PARCEL_ID NOT IN (SELECT DISTINCT parcel_id FROM owner_data WHERE parcel_id IS NOT NULL)
-            ORDER BY PARCEL_ID
+        // Include parcels that: 1) aren't in owner_data, OR 2) have blank/null owner_name
+        const sql = `SELECT slc.PARCEL_ID as parcel_id 
+            FROM salt_lake_county_lir_parcels slc
+            LEFT JOIN owner_data od ON slc.PARCEL_ID = od.parcel_id
+            WHERE od.parcel_id IS NULL 
+               OR od.owner_name IS NULL 
+               OR od.owner_name = ''
+            ORDER BY slc.PARCEL_ID
             LIMIT ?`;
             
         this.diskDb.all(sql, [limit], (err, rows) => {
@@ -771,12 +777,13 @@ class DataCollector {
                 }
 
                 const freshQuery = `
-                    SELECT PARCEL_ID as parcel_id
-                    FROM salt_lake_county_lir_parcels
-                    WHERE PARCEL_ID NOT IN (
-                        SELECT DISTINCT parcel_id FROM owner_data WHERE parcel_id IS NOT NULL
-                    )
-                    ORDER BY PARCEL_ID
+                    SELECT slc.PARCEL_ID as parcel_id
+                    FROM salt_lake_county_lir_parcels slc
+                    LEFT JOIN owner_data od ON slc.PARCEL_ID = od.parcel_id
+                    WHERE od.parcel_id IS NULL 
+                       OR od.owner_name IS NULL 
+                       OR od.owner_name = ''
+                    ORDER BY slc.PARCEL_ID
                     LIMIT ?`;
 
                 // First pass wider scan
